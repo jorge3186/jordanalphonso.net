@@ -6,16 +6,8 @@
 		<!-- css imports (stylesheets, sass) -->
 		<link rel="stylesheet" href="styles/mainstyles.css">
 
-		<!-- JS imports (angular, jQuery, custom app) -->
-		<script type="text/javascript" src="app.js"></script>
-
-		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
-		<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-
-		<!-- common html imports (header, footer) -->
-		
+		<title>Jordan Alphonso</title>
 			
-
 	</head>
 
 	<body>
@@ -27,6 +19,15 @@
     	<data-ng-include src="partials/header.html"></data-ng-include>
 
 		<div ui-view></div>
+
+		<data-ng-include src="partials/footer.html"><data-ng-include>
+
+		<!-- JS imports (angular, jQuery, custom app) -->
+		<script type="text/javascript" src="app.js"></script>
+
+		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
 
 	</body>
 </html>

@@ -1,16 +1,31 @@
 /** 
-
-Register routes for fulcrumApp in here.
-
+*
+*	Register routes for fulcrumApp in here.
+*
 */
 
-fulcrumApp.config(function($stateProvider, $urlRouteProvider) {
+fulcrumApp.config([
 
-	$urlRouteProvider.otherwise('/login');
+	'stateHelperProvider',
+	$urlRouteProvider,
+	$stateProvider,
+	$urlMatcherFactoryProvider,
 
-	$stateProvider
+	function(stateHelperProvider, $stateProvider, $urlRouteProvider, $urlMatcherFactoryProvider) {
 
-	/** Register routes and subroutes below */
-	
+		$urlRouteProvider.otherwise('/login');
+		$urlMatcherFactoryProvider.strictMode(false)
 
-});
+		/** Register routes and subroutes below */
+		$stateHelperProvider.
+
+		//Dashboard state - Main Page
+		state({
+			name: "dashboard",
+			url: "/",
+			templateUrl: "partials/dashboard.html",
+			controller: "DashboardController",
+			data: { requireLogin : false }
+		})
+
+}]);
