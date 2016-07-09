@@ -36,6 +36,4 @@ var fulcrumApp = angular.module(
 
 	/** Services **/
 
-	/** Routes **/
-
 	/** Directives **/
