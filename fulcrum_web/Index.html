@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html data-ng-app="fulcrum">
 	<head>
 
 		<!-- css imports (stylesheets, sass) -->
@@ -18,7 +18,13 @@
 
 	</head>
 
-	<body data-ng-app="fulcrum">
+	<body>
+
+		<!--[if lt IE 10]>
+     		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    	<![endif]-->
+
+    	<data-ng-include src="partials/header.html"></data-ng-include>
 
 		<div ui-view></div>
 

@@ -1,23 +1,32 @@
 /**
-
-Main Application - jordanalphonso.net
-
-fulcrumApp is where these get registered:
-	1. Directives (/components/directives)
-	2. Controllers (/components/controllers)
-	3. Services (components/services)
-	4. Routes (components/routes)
-	5. Constants (components/app_constants)
-
+*
+*	Main Application - jordanalphonso.net
+*
+*	fulcrumApp is where these are registered:
+*		1. Directives (/components/directives)
+*		2. Controllers (/components/controllers)
+*		3. Services (components/services)
+*		4. Routes (components/routes)
+*		5. Constants (components/app_constants)
+*
 **/
 
-//application with the name "fulcrum" and added dependencies that can be found in /lib folder
-var fulcrumApp = angular.module('fulcrum', ['ngAnimate', 'ngCookies', 'ngResource','ngStorage', 'ui.router']);
+var fulcrumApp = angular.module(
 
-/** Controllers */
+	//Application Name
+	'fulcrum', 
 
-/** Services */
+	//Dependencies
+	//Register here and make sure to import the script in index.html
+	['ngAnimate', 'ngCookies', 'ngResource','ngStorage', 'ui.router', 'ui.router.stateHelper']);
 
-/** Routes */
+	/** Constants **/
+	fulcrumApp.constant('authenticated', authenticated);
 
-/** Directives */
+	/** Controllers **/
+
+	/** Services **/
+
+	/** Routes **/
+
+	/** Directives **/

@@ -1,7 +1,13 @@
 /** 
-
-Register common constants here.
-
+*
+* Register common constants here.
+*
 */
 
-fulcrumApp.constant('authenticated', 'authenticated');
+var authenticated = function($scope) {
+
+	$rootScope.loggedUser = {
+
+	}
+	return false;
+};
