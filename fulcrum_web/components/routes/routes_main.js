@@ -4,28 +4,33 @@
 *
 */
 
-fulcrumApp.config([
+var mainRoutes = [
 
+	'$stateProvider',
+	'$urlRouterProvider',
+	'$urlMatcherFactoryProvider',
 	'stateHelperProvider',
-	$urlRouteProvider,
-	$stateProvider,
-	$urlMatcherFactoryProvider,
 
-	function(stateHelperProvider, $stateProvider, $urlRouteProvider, $urlMatcherFactoryProvider) {
+	function($stateProvider, 
+			 $urlRouterProvider, 
+			 $urlMatcherFactoryProvider, 
+			 stateHelperProvider) {
 
-		$urlRouteProvider.otherwise('/login');
+		$urlRouterProvider.otherwise('/');
 		$urlMatcherFactoryProvider.strictMode(false)
 
 		/** Register routes and subroutes below */
-		$stateHelperProvider.
+		stateHelperProvider.
 
 		//Dashboard state - Main Page
-		state({
-			name: "dashboard",
-			url: "/",
-			templateUrl: "partials/dashboard.html",
-			controller: "DashboardController",
-			data: { requireLogin : false }
-		})
+		state(
+			{	
+				name: "dashboard",
+				url: "/",
+				templateUrl: "partials/dashboard.html",
+				controller: "DashboardController",
+				data: { requireLogin : false }
+			}
+		});
 
-}]);
+}];

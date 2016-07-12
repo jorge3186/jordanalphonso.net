@@ -1,7 +1,7 @@
 /** Dashboard Controller **/
 
-var DashboardController = [$scope, function($scope) {
+var DashboardController = ['$scope', function($scope) {
 
-	$scope.message = "Welcome to the DashBoard".
+	$scope.message = "Welcome to the DashBoard";
 
-}];
+}];	

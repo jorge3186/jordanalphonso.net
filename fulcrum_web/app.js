@@ -10,6 +10,7 @@
 *		5. Constants (components/app_constants)
 *
 *	@author Jordan Alphonso <jordanalphonso1@yahoo.com>
+*	@date 2016
 *
 */
 
@@ -21,10 +22,10 @@ var fulcrumApp = angular.module(
 	//Dependencies
 	//Register here and make sure to import the necessary scripts in index.html
 	[
-		'ngAnimate', 
+		'ngAnimate',
 		'ngCookies', 
 		'ngResource',
-		'ngStorage', 
+		'angular-storage', 
 		'ui.router', 
 		'ui.router.stateHelper'
 	]);
@@ -33,6 +34,10 @@ var fulcrumApp = angular.module(
 	fulcrumApp.constant('authenticated', authenticated);
 
 	/** Controllers **/
+	fulcrumApp.controller('DashboardController', DashboardController);
+
+	/** Routes **/
+	fulcrumApp.config(mainRoutes);
 
 	/** Services **/
 

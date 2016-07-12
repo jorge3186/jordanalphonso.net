@@ -1,5 +1,9 @@
 /** main styles for fulcrum */
 
 body {
-	background-color: black;
+
+}
+
+div {
+	padding: 15px;
 }

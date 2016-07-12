@@ -16,23 +16,13 @@
      		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     	<![endif]-->
 
-    	<data-ng-include src="partials/header.html"></data-ng-include>
+    	<div data-ng-include src=" 'partials/header.html' "></div>
 
 		<div ui-view></div>
 
-		<data-ng-include src="partials/footer.html"><data-ng-include>
+		<div data-ng-include src=" 'partials/footer.html' "><div>
 
-		<!-- JS imports (angular, jQuery, custom app) -->
-		<script type="text/javascript" src="app.js"></script>
-
-		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
-		<script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
-		<script type="text/javascript" src="lib/angular-cookies/angular-cookies.min.js"></script>
-		<script type="text/javascript" src="lib/angular-resource/angular-resource.min.js"></script>
-		<script type="text/javascript" src="lib/angular-storage/dist/angular-storage.min.js"></script>
-		<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>		
-		<script type="text/javascript" src="lib/angular-ui-router.stateHelper/stateHelper.min.js"></script>
-
+		<div data-ng-include src=" 'common_files/common_imports.html' "><div data-ng-include>
 
 	</body>
 </html>
