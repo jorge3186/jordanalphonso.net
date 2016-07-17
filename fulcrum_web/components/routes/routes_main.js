@@ -2,7 +2,7 @@
 *
 *	Register routes for fulcrumApp in here.
 *
-*/
+**/
 
 var mainRoutes = [
 
@@ -30,7 +30,16 @@ var mainRoutes = [
 				templateUrl: "partials/dashboard.html",
 				controller: "DashboardController",
 				data: { requireLogin : false }
+			})
+		//Login state - for access to blog page
+		.state(
+			{
+				name: "login",
+				url : "/login",
+				templateUrl: "partials/login.html",
+				controller: "LoginController",
+				data: { requireLogin: false }
 			}
-		});
+		);
 
 }];

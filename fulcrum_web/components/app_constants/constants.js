@@ -2,7 +2,7 @@
 *
 * Register common constants here.
 *
-*/
+**/
 
 var authenticated = function($scope) {
 
@@ -11,3 +11,13 @@ var authenticated = function($scope) {
 	}
 	return false;
 };
+
+var USER_ROLES = function() 
+{
+	return 
+	{
+		admin : 'A',
+		developer : 'D',
+		viewer : 'V'
+	}
+}

@@ -32,9 +32,12 @@ var fulcrumApp = angular.module(
 
 	/** Constants **/
 	fulcrumApp.constant('authenticated', authenticated);
+	fulcrumApp.constant('USER_ROLES', USER_ROLES);
 
 	/** Controllers **/
+	fulcrumApp.controller('MainController', MainController);
 	fulcrumApp.controller('DashboardController', DashboardController);
+	fulcrumApp.controller('LoginController', LoginController);
 
 	/** Routes **/
 	fulcrumApp.config(mainRoutes);

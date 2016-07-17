@@ -7,3 +7,7 @@ body {
 div {
 	padding: 15px;
 }
+
+h1 {
+	font-style: bold;
+}
