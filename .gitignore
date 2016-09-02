@@ -1,3 +1,5 @@
 fulcrum_api/Resources/
 fulcrum_api/angular_app/node_modules/
 fulcrum_api/angular_app/lib
+fulcrum_api/Security/
+fulcrum_common/Utils/HashingUtils.cs
