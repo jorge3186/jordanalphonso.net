@@ -1,0 +1,6 @@
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_common\bin\Release\fulcrum_common.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_common\bin\Release\fulcrum_common.pdb
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_common\bin\Release\BCrypt.Net.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_common\bin\Release\BCrypt.Net.xml
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_common\obj\Release\fulcrum_common.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_common\obj\Release\fulcrum_common.pdb

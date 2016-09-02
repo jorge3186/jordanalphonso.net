@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="fulcrum_services"
+                   namespace="fulcrum_services.Models.MessageBoard">
+
+  <class name="Topic" table="TOPIC">
+
+    <id name="id" column="TOPIC_ID">
+      <generator class="native" />
+    </id>
+
+    <property name="creatorId" column="TOPIC_CRTR" />
+    <property name="creatorName" column="TOPIC_CRTR_NME" />
+    <property name="createdTime" column="TOPIC_CRT_DT" />
+    <property name="subject" column="TOPIC_SUBJ" />
+    <property name="company" column="TOPIC_CMPNY" type="CompanyCustomType" />
+    <property name="version" column="VER" />
+    <property name="updatedTime" column="UPD_DT" />
+    <property name="updatedUser" column="UPD_USR" />
+
+  </class>
+
+</hibernate-mapping>

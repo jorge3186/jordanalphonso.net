@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="fulcrum_services"
+                   namespace="fulcrum_services.Models.FulcrumUser">
+
+  <class name="FulcrumUserDetail" table="FULC_USR_DTL">
+
+    <id name="id" column="FULC_USR_DTL_ID">
+      <generator class="native" />
+    </id>
+
+    <property name="userId" column="FULC_USR_ID" />
+    <property name="address" column="USR_ADDRESS" />
+    <property name="city" column="USR_CITY" />
+    <property name="state" column="USR_STATE_CD" />
+    <property name="alternateEmail" column="USR_ALT_EMAIL" />
+    <property name="phoneNumber" column="USR_PHN" />
+    <property name="alternatePhoneNumber" column="USR_ALT_PHN" />
+    <property name="phoneNumberConfirmed" column="USR_PHN_CNFD" />
+    <property name="company" column="USR_CMPY_CD" type="CompanyCustomType" />
+    <property name="version" column="VER" />
+    <property name="updatedTime" column="UPD_DT" />
+    <property name="updatedUser" column="UPD_USR" />
+
+  </class>
+
+</hibernate-mapping>

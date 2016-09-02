@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="fulcrum_services"
+                   namespace="fulcrum_services.Models.MessageBoard">
+
+  <class name="Comment" table="CMMT">
+
+    <id name="id" column="CMMT_ID">
+      <generator class="native" />
+    </id>
+
+    <property name="creatorId" column="CMMT_CRTR" />
+    <property name="creatorName" column="CMMT_CRTR__NME" />
+    <property name="createdTime" column="CMMT_CRT_DT" />
+    <property name="comment" column="CMMT_CMMT" />
+    <property name="messageId" column="MSG_ID" />
+    <property name="version" column="VER" />
+    <property name="updatedTime" column="UPD_DT" />
+    <property name="updatedUser" column="UPD_USR" />
+
+  </class>
+
+</hibernate-mapping>

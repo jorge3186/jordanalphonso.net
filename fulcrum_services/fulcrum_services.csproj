@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45AAC41C-EBF6-4874-8636-2FEF0D05BA43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fulcrum_services</RootNamespace>
+    <AssemblyName>fulcrum_services</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.3.0.442, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.3.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IdentityOwin\BCryptPasswordHasher.cs" />
+    <Compile Include="IdentityOwin\FulcrumTokenProvider.cs" />
+    <Compile Include="IdentityOwin\FulcrumUserManager.cs" />
+    <Compile Include="IdentityOwin\FulcrumUserStore.cs" />
+    <Compile Include="IdentityOwin\LoginResponse.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\FulcrumUser\FulcrumUser.cs" />
+    <Compile Include="Models\FulcrumUser\FulcrumUserDetail.cs" />
+    <Compile Include="Models\FulcrumUser\FulcrumUserRole.cs" />
+    <Compile Include="Models\MessageBoard\Comment.cs" />
+    <Compile Include="Models\MessageBoard\Message.cs" />
+    <Compile Include="Models\MessageBoard\Topic.cs" />
+    <Compile Include="Models\SessionManagement\LoggedUser.cs" />
+    <Compile Include="Models\SessionManagement\UserDetails.cs" />
+    <Compile Include="NHibernate\Criteria\FQualifier.cs" />
+    <Compile Include="NHibernate\Criteria\FRestrictions.cs" />
+    <Compile Include="NHibernate\CustomTypes\ICustomType.cs" />
+    <Compile Include="NHibernate\CustomTypes\Company.cs" />
+    <Compile Include="NHibernate\CustomTypes\Role.cs" />
+    <Compile Include="NHibernate\FulcrumInterceptor.cs" />
+    <Compile Include="NHibernate\HibernateTypes\CompanyCustomType.cs" />
+    <Compile Include="NHibernate\HibernateTypes\HibernateCustomType.cs" />
+    <Compile Include="NHibernate\HibernateTypes\RoleCustomType.cs" />
+    <Compile Include="NHibernate\NHibernateRepoWrapper.cs" />
+    <Compile Include="NHibernate\NHibernateSessionManager.cs" />
+    <Compile Include="NHibernate\NHibernateTypeDefs.cs" />
+    <Compile Include="NHibernate\QueryResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\IdentityOwin\IOwinRepository.cs" />
+    <Compile Include="Repositories\IdentityOwin\OwinRepository.cs" />
+    <Compile Include="Repositories\IGenericRepository.cs" />
+    <Compile Include="Repsonses\EmailResponsse.cs" />
+    <Compile Include="Security\TokenGenerator.cs" />
+    <Compile Include="Services\Email\EmailService.cs" />
+    <Compile Include="Services\Email\IEmailService.cs" />
+    <Compile Include="Services\GenericService.cs" />
+    <Compile Include="Services\IdentityOwin\IOwinService.cs" />
+    <Compile Include="Services\IdentityOwin\OwinService.cs" />
+    <Compile Include="Services\IGenericService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fulcrum_common\fulcrum_common.csproj">
+      <Project>{D59CAC66-A815-42A3-9D1A-F6A6F201BFB0}</Project>
+      <Name>fulcrum_common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\FulcrumUser\FulcrumUser.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\FulcrumUser\FulcrumUserDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\FulcrumUser\FulcrumUserRole.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Clientel\" />
+    <Folder Include="Models\Tutorials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mappings\MessageBoard\Comment.hbm.xml" />
+    <Content Include="Mappings\MessageBoard\Message.hbm.xml" />
+    <Content Include="Mappings\MessageBoard\Topic.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

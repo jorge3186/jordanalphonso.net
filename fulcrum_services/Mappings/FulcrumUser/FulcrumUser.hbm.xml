@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="fulcrum_services"
+                   namespace="fulcrum_services.Models.FulcrumUser">
+
+  <class name="FulcrumUser" table="FULC_USR">
+
+    <id name="id" column="FULC_USR_ID">
+      <generator class="native" />
+    </id>
+
+    <property name="firstName" column="USR_FRST_NME" />
+    <property name="lastName" column="USR_LST_NME" />
+    <property name="UserName" column="USR_USR_NME" />
+    <property name="password" column="USR_PW" />
+    <property name="email" column="USR_EMAIL" />
+    <property name="emailConfirmed" column="EMAIL_CNFMD" />
+    <property name="accessFailedCount" column="ACC_FLD_CNT" />
+    <property name="lockoutEnabled" column="LCKOUT_ENBLD" />
+    <property name="lockoutEndDate" column="LCKOUT_END_DT" />
+    <property name="version" column="VER" />
+    <property name="updatedTime" column="UPD_DT" />
+    <property name="updatedUser" column="UPD_USR" />
+    
+  </class>
+
+</hibernate-mapping>

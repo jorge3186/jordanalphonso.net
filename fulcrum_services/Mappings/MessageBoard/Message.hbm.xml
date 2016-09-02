@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="fulcrum_services"
+                   namespace="fulcrum_services.Models.MessageBoard">
+
+  <class name="Message" table="MSG">
+
+    <id name="id" column="MSG_ID">
+      <generator class="native" />
+    </id>
+
+    <property name="creatorId" column="MSG_CRTR" />
+    <property name="creatorName" column="MSG_CRTR_NME" />
+    <property name="createdTime" column="MSG_CRT_DT" />
+    <property name="message" column="MSG_MSG" />
+    <property name="topicId" column="TOPIC_ID" />
+    <property name="version" column="VER" />
+    <property name="updatedTime" column="UPD_DT" />
+    <property name="updatedUser" column="UPD_USR" />
+
+  </class>
+
+</hibernate-mapping>

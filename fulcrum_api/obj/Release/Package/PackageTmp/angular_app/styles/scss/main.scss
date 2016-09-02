@@ -1,0 +1,67 @@
+
+//Register your sass here
+
+$main-color: darken(darkgray, 40%);
+$secondary-color: orangered;
+$white-text: white;
+$outline: none !default;
+$menu-button-width: 100px;
+
+@mixin boldFont() {
+    color: $white-text;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+}
+
+@mixin transition($prop, $duration) {
+    -webkit-transition: $prop $duration;
+    -moz-transition: $prop $duration;
+    -o-transition: $prop $duration;
+    transition: $prop $duration;
+}
+
+body {
+    background-color: $main-color;
+}
+
+a {
+    outline: $outline;
+    text-decoration: none;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    margin-left: -115px;
+    top: 25%;
+
+    & li {
+        list-style-type: none;
+    }
+}
+
+.menu-button {
+    @include transition(width, 0.4s);
+    @include boldFont();
+
+    background-color: black;
+    color: $white-text;
+    text-align: right;
+    width: $menu-button-width;
+    height: 35px;
+    padding-right: 10px;
+    padding-top: 8px;
+    box-shadow: 10px, 10px, inset;
+
+    &:hover {
+        width: $menu-button-width + ($menu-button-width / 5);
+    }
+}
+
+.menu-button-active {
+    @extend .menu-button;
+    background-color: lighten(black, 20%);
+    width: $menu-button-width + ($menu-button-width / 5);
+
+    &:hover {}
+}

@@ -1,18 +1,25 @@
-﻿using System;
+﻿using fulcrum_api.Attributes.Controller;
+using fulcrum_api.Constants;
+using fulcrum_api.Controllers.FulcrumBase;
+using fulcrum_services.Models.FulcrumUser;
+using fulcrum_services.Services;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Net.Http;
+using System.Web.Http;
 
-namespace fulcrum_API.Controllers
+namespace fulcrum_api.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : FulcrumBaseController
     {
-        public ActionResult Index()
-        {
-            ViewBag.Title = "Home Page";
+        private IDictionary<string, string> welcome =  new Dictionary<string, string>();
 
-            return View();
+        [FulcrumRoute(Route: "/", Credentials: false, HttpMethods: F.GET)]
+        public IDictionary<string, string> HomeScreen()
+        {
+            welcome.Add("Message", "Welcome to the Fulcrum Homepage!");
+            welcome.Add("Copyright", "jordanalphonso.net - "+DateTime.Now.Year.ToString());
+            return welcome;
         }
     }
 }

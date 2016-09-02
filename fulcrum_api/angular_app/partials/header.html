@@ -1,0 +1,9 @@
+<ul class="menu">
+	<li data-ng-repeat="item in menuItems">
+		<a data-ui-sref="{{item.link}}">
+            <div data-ng-class="$state.is('{{item.link}}') ? 'menu-button-active' : 'menu-button'">
+                {{item.name}}
+            </div>
+        </a>
+	</li>
+</ul>

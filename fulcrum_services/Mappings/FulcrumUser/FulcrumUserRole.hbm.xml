@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="fulcrum_services"
+                   namespace="fulcrum_services.Models.FulcrumUser">
+
+  <class name="FulcrumUserRole" table="FULC_USR_RLE">
+
+    <id name="id" column="FULC_USR_RLE_ID">
+      <generator class="native" />
+    </id>
+
+    <property name="userId" column="FULC_USR_ID" />
+    <property name="role" column="USR_RLE" type="RoleCustomType" />
+    <property name="version" column="VER" />
+    <property name="updatedTime" column="UPD_DT" />
+    <property name="updatedUser" column="UPD_USR" />
+
+  </class>
+
+</hibernate-mapping>
