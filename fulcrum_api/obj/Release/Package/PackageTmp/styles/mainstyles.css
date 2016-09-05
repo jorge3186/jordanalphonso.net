@@ -1,0 +1,38 @@
+body {
+  background-color: #434343; }
+
+a {
+  outline: none;
+  text-decoration: none; }
+
+.menu {
+  position: absolute;
+  left: 0;
+  margin-left: -115px;
+  top: 25%; }
+  .menu li {
+    list-style-type: none; }
+
+.menu-button, .menu-button-active {
+  -webkit-transition: width 0.4s;
+  -moz-transition: width 0.4s;
+  -o-transition: width 0.4s;
+  transition: width 0.4s;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  text-align: right;
+  width: 100px;
+  height: 35px;
+  padding-right: 10px;
+  padding-top: 8px;
+  box-shadow: 10px, 10px, inset; }
+  .menu-button:hover, .menu-button-active:hover {
+    width: 120px; }
+
+.menu-button-active {
+  background-color: #333333;
+  width: 120px; }
+

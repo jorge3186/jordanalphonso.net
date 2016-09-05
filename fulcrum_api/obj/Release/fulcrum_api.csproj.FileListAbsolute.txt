@@ -82,3 +82,9 @@ C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcr
 C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\WebGrease.dll
 C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\Antlr3.Runtime.pdb
 C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\System.Web.Optimization.xml
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\EntityFramework.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\Microsoft.Owin.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\Microsoft.Owin.Security.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Jordan.alphonso\Documents\Visual Studio 2015\Projects\fulcrum_API\fulcrum_api\bin\index.html

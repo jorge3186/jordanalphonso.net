@@ -1,0 +1,22 @@
+{
+  "name": "fulcrum_npm",
+  "version": "1.0.0",
+  "description": "fulcrum angular app for jordanalphonso.net",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorge3186/jordanalphonso.net.git"
+  },
+  "keywords": [
+    "jordanalphonso.net"
+  ],
+  "author": "Jordan Alphonso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorge3186/jordanalphonso.net/issues"
+  },
+  "homepage": "https://github.com/jorge3186/jordanalphonso.net#readme"
+}

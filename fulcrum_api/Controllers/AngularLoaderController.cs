@@ -19,11 +19,10 @@ namespace fulcrum_api.Controllers
         public Task<HttpResponseMessage> ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)
         {
             var request = controllerContext.Request;
-            string assemblyPath = AppDomain.CurrentDomain.BaseDirectory;
+            string intermPath = AppDomain.CurrentDomain.BaseDirectory;
+            string indexPath = Path.Combine(intermPath, "index.html");
+            var index = File.ReadAllText(indexPath, Encoding.UTF8);
 
-
-            var index = File.ReadAllText(assemblyPath+"/angular_app/index.html", Encoding.UTF8);
-           
             var result = request.CreateResponse(HttpStatusCode.OK);
             result.Content = new StringContent(index);
             result.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
